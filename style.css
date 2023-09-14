@@ -219,6 +219,53 @@ nav ul li a:hover::after {
     align-items: center;
 }
 
+/* Styles for the pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%; /* Place the pop-up in the middle vertically */
+    left: 50%; /* Place the pop-up in the middle horizontally */
+    transform: translate(-50%, -50%); /* Center the pop-up both horizontally and vertically */
+    z-index: 1;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%; /* Adjust the width as needed */
+    max-width: 560px; /* Set a maximum width if desired */
+}
+
+.popup-content a{
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+.popup-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #080808;
+}
+
+.popup-content p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #080808;
+}
+
+#closePopupBtn {
+    background-color: #ff004f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
 
 
 
