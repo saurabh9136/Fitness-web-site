@@ -513,6 +513,9 @@ nav .fas{
         z-index: 2;
         transition: right 0.5s;
     }
+    .contact-right form{
+        width: 90%;
+    }
     nav ul li{
         display: block;
         margin: 25px;
