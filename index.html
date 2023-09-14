@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Web Site</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/919a2ff88a.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </head>
 <body>
     <div id="header">
@@ -33,7 +35,7 @@
         </div>
     </div>
 <!-- -----------------------------------about--------------------------- -->
-    <div id="about">
+    <div id="about" data-aos="zoom-in" data-aos-once="true">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
@@ -84,7 +86,7 @@
         </div>
     </div>
     <!-- -----------------Course-------- -->
-    <div id="course">
+    <div id="course" data-aos="zoom-in-right" data-aos-once="true">
         <div class="container">
             <h1 class="sub-title"> Course </h1>
             <div class="course-list">
@@ -177,7 +179,7 @@
                         "Unlocking the Secrets of Wealth” <br>
                         📊 Nutrition Templates will be shared <br>
                         📋 Training Templates will be Shared <br>
-                        📲 Unlimited access to me via the WhatsApp Group <br>Lifetime Access to Recorded Lectures and Updates
+                        📲 Unlimited access to me via the WhatsApp Group<br> Lifetime Access to Recorded Lectures and Updates
                     </p>
                     <br> <hr><br>
                     <p style="text-align: center; font-size: 20px;">
@@ -195,8 +197,8 @@
 
     </div>
 
-    <!----------- Enroll Now -------------!>
-     <div id="enrollPopup" class="popup">
+    <!-- Pop-up container -->
+    <div id="enrollPopup" class="popup">
         <div class="popup-content">
             <h2> Thank you for choosing us!</h2>
             <p>Move forward in your fitness journey with the following details:</p>
@@ -207,8 +209,9 @@
         </div>
     </div>
 
+
     <!-- -----------------Coaching-------- -->
-    <div id="coaching">
+    <div id="coaching" data-aos="zoom-in-left" data-aos-once="true">
         <h1 class="sub-title feed"> Coaching</h1>
         <div class="custom-coaching">
         
@@ -410,51 +413,51 @@ form.addEventListener('submit', e => {
 
       <script>
        let slideIndex = 1;
-showSlides(slideIndex);
+        showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
       </script>
       <script>
         // Wait for the DOM to be fully loaded
-document.addEventListener("DOMContentLoaded", function () {
-    // Get all module toggle icons
-    const moduleToggles = document.querySelectorAll('.module-toggle');
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get all module toggle icons
+            const moduleToggles = document.querySelectorAll('.module-toggle');
 
-    // Add a click event listener to each toggle icon
-    moduleToggles.forEach(toggle => {
-        toggle.addEventListener('click', () => {
-            const content = toggle.parentElement.querySelector('.points'); // Get the module content
-            content.style.display = content.style.display === 'block' ? 'none' : 'block'; // Toggle visibility
+            // Add a click event listener to each toggle icon
+            moduleToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.parentElement.querySelector('.points'); // Get the module content
+                    content.style.display = content.style.display === 'block' ? 'none' : 'block'; // Toggle visibility
+                });
+            });
         });
-    });
-});
 
       </script>
-    <script>
+      <script>
         // Get the button and pop-up elements
         const enrollNowBtn = document.querySelector('.btn');
         const enrollPopup = document.getElementById('enrollPopup');
@@ -474,6 +477,17 @@ document.addEventListener("DOMContentLoaded", function () {
         enrollNowBtn.addEventListener('click', showEnrollPopup);
         closePopupBtn.addEventListener('click', closeEnrollPopup);
 
+      </script>
+
+
+
+      <!-- ---------------animation----------------------- -->
+      <script>
+        AOS.init({
+            offset:300,
+            duration: 1000,
+            once:true
+        });
       </script>
 </body>
 </html>
