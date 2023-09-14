@@ -195,6 +195,18 @@
 
     </div>
 
+    <!----------- Enroll Now -------------!>
+     <div id="enrollPopup" class="popup">
+        <div class="popup-content">
+            <h2> Thank you for choosing us!</h2>
+            <p>Move forward in your fitness journey with the following details:</p>
+            <p>Gpay No: 9326515699</p>
+            <p>UPI ID: abhinashpandey3519@okhdfcbank</p>
+            <p>If you encounter any issues, please feel free to <a href="#contact">contact us</a>.</p>
+            <button id="closePopupBtn">Close</button>
+        </div>
+    </div>
+
     <!-- -----------------Coaching-------- -->
     <div id="coaching">
         <h1 class="sub-title feed"> Coaching</h1>
@@ -440,6 +452,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+      </script>
+    <script>
+        // Get the button and pop-up elements
+        const enrollNowBtn = document.querySelector('.btn');
+        const enrollPopup = document.getElementById('enrollPopup');
+        const closePopupBtn = document.getElementById('closePopupBtn');
+
+        // Function to show the pop-up
+        function showEnrollPopup() {
+            enrollPopup.style.display = 'block';
+        }
+
+        // Function to close the pop-up
+        function closeEnrollPopup() {
+            enrollPopup.style.display = 'none';
+        }
+
+        // Event listeners
+        enrollNowBtn.addEventListener('click', showEnrollPopup);
+        closePopupBtn.addEventListener('click', closeEnrollPopup);
 
       </script>
 </body>
