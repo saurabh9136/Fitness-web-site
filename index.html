@@ -448,7 +448,7 @@ document.addEventListener("DOMContentLoaded", function () {
     moduleToggles.forEach(toggle => {
         toggle.addEventListener('click', () => {
             const content = toggle.parentElement.querySelector('.points'); // Get the module content
-            content.style.display = content.style.display === 'none' ? 'block' : 'none'; // Toggle visibility
+            content.style.display = content.style.display === 'block' ? 'none' : 'block'; // Toggle visibility
         });
     });
 });
