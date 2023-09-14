@@ -615,4 +615,7 @@ nav .fas{
     .copyright{
         font-size: 14px;
     }
+     #feedback{
+        margin-top: -30px;
+    }
 }
