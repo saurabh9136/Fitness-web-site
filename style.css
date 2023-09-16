@@ -183,7 +183,7 @@ nav ul li a:hover::after {
     
 }
 .course-list div:hover{
-    background: #ff004f;
+    background: red;
     transform: translateY(-10px);
 }
 
